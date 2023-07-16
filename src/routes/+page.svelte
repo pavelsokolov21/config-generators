@@ -16,6 +16,9 @@
 		<section>configurator</section>
 		<section>
 			<ConfigViewer prefix="module.export = " json={config} filename="webpack.config.js" />
+			<div class="install-command">
+				<code>npm i -D webpack webpack-cli</code>
+			</div>
 		</section>
 	</div>
 </main>
@@ -24,5 +27,13 @@
 	.container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.install-command {
+		margin-top: 12px;
+		padding: 12px 16px;
+		border-radius: $borderRadiusMD;
+		background: $primaryDark;
+		color: $white;
 	}
 </style>

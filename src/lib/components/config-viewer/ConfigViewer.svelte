@@ -11,27 +11,35 @@
 
 <figure class="config">
 	{#if !!filename}
-		<figcaption class="config__filename">{filename}</figcaption>
+		<figcaption class="config__filename sides">{filename}</figcaption>
 	{/if}
-	<div class="config__code-wrapper">
+	<div class="config__code-wrapper sides">
 		<code class="config__code" contenteditable="false" bind:innerHTML={content} />
 	</div>
 </figure>
 
 <style lang="scss">
+	.sides {
+		padding: 0 16px;
+	}
+
 	.config {
+		margin: 0;
+		padding: 12px 0;
+		border-radius: $borderRadiusMD;
+		background-color: $primaryDark;
+		color: $white;
+
 		&__filename {
-			margin-bottom: 12px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid $primaryGrey;
 		}
 
 		&__code-wrapper {
-			padding: 16px;
-			border-radius: 8px;
-			background-color: rgb(42, 42, 42);
+			padding-top: 8px;
 		}
 
 		&__code {
-			color: white;
 			outline: none;
 		}
 	}
