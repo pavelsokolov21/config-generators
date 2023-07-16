@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { ConfigViewer } from '$components';
+
+	const json = { a: 1, b: 2, foo: { c: 1, d: [] } };
+</script>
+
+<main>
+	<div class="container">
+		<section>configurator</section>
+		<section>
+			<ConfigViewer prefix="module.export = " {json} />
+		</section>
+	</div>
+</main>
+
+<style lang="scss">
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+</style>
