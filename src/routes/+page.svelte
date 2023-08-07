@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { ConfigViewer } from '$components';
 
+<<<<<<< Updated upstream
 	const json = { a: 1, b: 2, foo: { c: 1, d: [] } };
+=======
+	const config = {
+		entry: "path.resolve(__dirname, 'src/index.js')",
+		output: { path: "path.resolve(__dirname, 'dist')", filename: 'bundle.js' }
+	};
+>>>>>>> Stashed changes
 </script>
 
 <main>
